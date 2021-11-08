@@ -1,3 +1,4 @@
+"./Drivers/.metadata/.plugins/org.eclipse.cdt.make.core/specs.o"
 "./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o"
 "./Drivers/CMSIS/system_stm32f4xx.o"
 "./Drivers/Core/Src/stm32f4xx_it.o"

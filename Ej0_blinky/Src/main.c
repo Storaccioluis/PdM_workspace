@@ -20,6 +20,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "stdbool.h"
+#include "API_delay.h"
 
 /** @addtogroup STM32F4xx_HAL_Examples
   * @{
@@ -65,14 +67,19 @@ int main(void)
   /* Configure the system clock to 180 MHz */
   SystemClock_Config();
 
-  /* Initialize BSP Led for LED2 */
+  /* Initialize BSP Led for LED's */
+  BSP_LED_Init(LED1);
   BSP_LED_Init(LED2);
+  BSP_LED_Init(LED3);
+
+  /*Initialize Push Button */
+  BSP_PB_Init(BUTTON_USER,BUTTON_MODE_GPIO);
+
 
   /* Infinite loop */
   while (1)
   {
-	  BSP_LED_Toggle(LED2);
-	  HAL_Delay(100);
+    BSP_LED_Toggle(LED1);
   }
 }
 

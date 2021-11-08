@@ -16,6 +16,7 @@ RM := rm -rf
 -include Drivers/Core/Src/subdir.mk
 -include Drivers/CMSIS/subdir.mk
 -include Drivers/BSP/STM32F4xx_Nucleo_144/subdir.mk
+-include Drivers/.metadata/.plugins/org.eclipse.cdt.make.core/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -65,8 +66,8 @@ all: main-build
 main-build: Ej0_blinky.elf secondary-outputs
 
 # Tool invocations
-Ej0_blinky.elf: $(OBJS) $(USER_OBJS) /home/pato/Embebidos/CESE/PdM_workspace/Ej0_blinky/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Ej0_blinky.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/pato/Embebidos/CESE/PdM_workspace/Ej0_blinky/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ej0_blinky.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Ej0_blinky.elf: $(OBJS) $(USER_OBJS) /home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Ej0_blinky.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ej0_blinky.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
