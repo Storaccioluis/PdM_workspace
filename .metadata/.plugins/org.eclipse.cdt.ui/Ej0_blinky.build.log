@@ -1,27 +1,17 @@
-22:23:56 **** Incremental Build of configuration Debug for project Ej0_blinky ****
+18:07:38 **** Build of configuration Debug for project Ej0_blinky ****
 make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/BSP/STM32F4xx_Nucleo_144" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Inc" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/Core/Inc" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f429xx.d" -MT"Startup/startup_stm32f429xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f429xx.o" "../Startup/startup_stm32f429xx.s"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/BSP/STM32F4xx_Nucleo_144" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/Core/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:78:7: warning: unused variable 'cont' [-Wunused-variable]
-   78 |   int cont=0;
-      |       ^~~~
-../Src/main.c:77:7: warning: unused variable 'secuencia' [-Wunused-variable]
-   77 |   int secuencia=0;
-      |       ^~~~~~~~~
-arm-none-eabi-gcc -o "Ej0_blinky.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ej0_blinky.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Ej0_blinky.elf
- 
-arm-none-eabi-size   Ej0_blinky.elf 
-arm-none-eabi-objdump -h -S  Ej0_blinky.elf  > "Ej0_blinky.list"
-arm-none-eabi-objcopy  -O binary  Ej0_blinky.elf  "Ej0_blinky.bin"
-   text	   data	    bss	    dec	    hex	filename
-   6436	     36	   1572	   8044	   1f6c	Ej0_blinky.elf
-Finished building: default.size.stdout
- 
-Finished building: Ej0_blinky.bin
- 
-Finished building: Ej0_blinky.list
- 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/Legacy/stm32f4xx_hal_can.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/BSP/STM32F4xx_Nucleo_144" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/Core/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/Legacy/stm32f4xx_hal_can.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/Legacy/stm32f4xx_hal_can.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/Legacy/stm32f4xx_hal_can.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/BSP/STM32F4xx_Nucleo_144" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/Core/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/BSP/STM32F4xx_Nucleo_144" -I"/home/luis/Embebidos/ProgramacionMicrocontrolador/PdM_workspace/Ej0_blinky/Drivers/Core/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o"
+../Src/main.c:24:10: fatal error: API_delay.h: No such file or directory
+   24 | #include "API_delay.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:19: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
 
-22:23:57 Build Finished. 0 errors, 2 warnings. (took 1s.147ms)
+18:07:39 Build Failed. 3 errors, 0 warnings. (took 1s.41ms)
 

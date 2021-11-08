@@ -1,0 +1,15 @@
+!SESSION 2021-10-20 15:40:25.371 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_AR
+Command-line arguments:  -data /home/luis/Embebidos/PdM_workspace/Ej0_blinky/Drivers -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-10-20 15:40:34.052
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-20 15:40:34.149
+!MESSAGE Log4j initialized with config file /home/luis/Embebidos/PdM_workspace/Ej0_blinky/Drivers/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-20 15:40:38.224
+!MESSAGE Started RMI Server, listening on port 41337
