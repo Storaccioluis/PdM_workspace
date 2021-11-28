@@ -21,6 +21,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
+
 /** @addtogroup STM32F4xx_HAL_Examples
   * @{
   */
@@ -72,6 +73,7 @@ int main(void)
   SystemClock_Config();
 
   /* Initialize BSP Led for LED2 and LED3*/
+  BSP_LED_Init(LED1);
   BSP_LED_Init(LED2);
   BSP_LED_Init(LED3);
 
@@ -85,8 +87,9 @@ int main(void)
       - Parity      = ODD parity
       - BaudRate    = 9600 baud
       - Hardware flow control disabled (RTS and CTS signals) */
-  UartHandle.Instance        = USARTx;
 
+
+  UartHandle.Instance        = USARTx;
   UartHandle.Init.BaudRate   = 9600;
   UartHandle.Init.WordLength = UART_WORDLENGTH_8B;
   UartHandle.Init.StopBits   = UART_STOPBITS_1;
@@ -94,21 +97,24 @@ int main(void)
   UartHandle.Init.HwFlowCtl  = UART_HWCONTROL_NONE;
   UartHandle.Init.Mode       = UART_MODE_TX_RX;
   UartHandle.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&UartHandle) != HAL_OK)
+
+  if(HAL_UART_Init(&UartHandle) != HAL_OK)
   {
     /* Initialization Error */
     Error_Handler();
   }
-
+  BSP_LED_Toggle(LED2);
   /* Output a message on Hyperterminal using printf function */
-  printf("\n\r UART Printf Example: retarget the C library printf function to the UART\n\r");
-  printf("** Test finished successfully. ** \n\r");
+  printf("UART Printf Example: retarget the C library printf function to the UART\n\r");
+  printf("** Test finished successfully.\n\r ");
 
   /* Infinite loop */
   while (1)
   {
 	  BSP_LED_Toggle(LED3);
-	  HAL_Delay(100);
+	  HAL_Delay(1000);
+	  printf("** Test finished successfully. \n\r");
+
   }
 }
 
