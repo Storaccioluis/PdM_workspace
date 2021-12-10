@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="HAL_UART_Init"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="HAL_UART_Init"/>
-			<item value="toogle"/>
-			<item value="bit"/>
-			<item value="boolean"/>
-			<item value="bo"/>
-			<item value="bool"/>
-			<item value="push button"/>
-			<item value="led1"/>
-			<item value="button"/>
+			<item value="TIM4"/>
+			<item value="preload"/>
+			<item value="TIM_OC1_SetConfig"/>
+			<item value="OUTPUTSTATE"/>
+			<item value="TIM_OUTPUTSTATE_ENABLE"/>
+			<item value="OutputState"/>
+			<item value="Output"/>
+			<item value="HAL_TIM_PWM_Start"/>
+			<item value="tim"/>
+			<item value="tim4"/>
+			<item value="RCC_APB1"/>
+			<item value="apb1"/>
+			<item value="TIM_Prescaler"/>
+			<item value="TIM_BaseStruct"/>
+			<item value="prescaler"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="478"/>
-		<item key="DIALOG_Y_ORIGIN" value="78"/>
+		<item key="DIALOG_X_ORIGIN" value="951"/>
+		<item key="DIALOG_Y_ORIGIN" value="154"/>
 		<item key="DIALOG_WIDTH" value="348"/>
 		<item key="DIALOG_HEIGHT" value="440"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
